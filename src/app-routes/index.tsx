@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import LandingPage from "../pages/LandingPage";
 
 // view- pages
 
@@ -12,7 +13,7 @@ function APPRoutes() {
     <Router>
       <Routes>
         {/* public routes */}
-        <Route path="/" element={<main className="bg-gray-500">Hello</main>} />
+        <Route path="/" element={<LandingPage />} />
       </Routes>
     </Router>
   );
