@@ -9,12 +9,19 @@ import ArrowRight from "./arrow-right.png";
 import LadyWithLaptop from "./LadyWithLaptop.png";
 import PieGraph from "./PieGraph.png";
 import Logo from "./Logo.png";
+import LogoManOnPhone from "./ManOnPhone.png";
 import Analytics01 from "./Analytics01.png";
 import Analytics02 from "./Analytics03.png";
 import Analytics03 from "./Analytics03.png";
 import Author01 from "./Author01.png";
 import Author02 from "./Author02.png";
 import Author03 from "./Author03.png";
+import Services01 from "./Services01.png";
+import Services02 from "./Services02.png";
+import Services03 from "./Services03.png";
+import User01 from "./User01.png";
+import User02 from "./User02.png";
+import User03 from "./User03.png";
 import Logo01 from "./clients/Logo01.png";
 import Logo02 from "./clients/Logo02.png";
 import Logo03 from "./clients/Logo03.png";
@@ -46,4 +53,11 @@ export {
   Author01,
   Author02,
   Author03,
+  User01,
+  User02,
+  User03,
+  LogoManOnPhone,
+  Services01,
+  Services02,
+  Services03,
 };

@@ -23,8 +23,26 @@ import {
   Author01,
   Author02,
   Author03,
+  User01,
+  User02,
+  User03,
+  LogoManOnPhone,
+  Services01,
+  Services02,
+  Services03,
 } from "../app-assets/img";
+import {
+  SvgIcon1,
+  SvgIcon2,
+  SvgIcon3,
+  Barchart,
+} from "../app-assets/svg-icons/SvgIcon";
 import BlogCard from "../app-components/BlogCard";
+import FAQItem from "../app-components/FAQItem";
+import FeatureCard from "../app-components/FeatureCard";
+import InfoCard from "../app-components/InfoCard";
+import InfoCardRight from "../app-components/InfoCardRight";
+import TestimonialCard from "../app-components/TestimonialCard";
 import Footer from "../app-layouts/Footer";
 
 const LandingPage = () => {
@@ -67,7 +85,7 @@ const LandingPage = () => {
         <div className="absolute -top-[74em] -right-[40em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
 
         <div>
-          <img src={Logo} />
+          <img src={Logo} alt="h-logo" />
           <ul>
             <li>Product</li>
             <li>Services</li>
@@ -106,451 +124,139 @@ const LandingPage = () => {
       </section>
 
       {/* our services */}
-      <section>
-        <div className="w-full text-center mb-12">
-          <h5>Our Services</h5>
-          <h1 className="text-[48px] ">
+      <section className="bg-white mx-auto container mt-24 relative mb-[100px]">
+        {/* services area lead */}
+        <div className="w-full text-center mb-12 px-36">
+          <h5 className="text-[#777777] text-lg">Our Services</h5>
+          <h1 className="text-[42px] font-medium font-manrope">
             Handshake infographic mass market crowdfunding iteration.
           </h1>
         </div>
-        <div className="mx-14 grid grid-cols-3 gap-12 mb-12 items-center">
-          <div className="col-span-1 items-center">
-            {/* image */}
-            <img src={Blog01} />
-            {/* category */}
-            <div className="flex gap-3 py-4 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
+
+        {/* grid-3 area */}
+        <div className="mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-32 items-center">
+          <FeatureCard
+            imageSrc={Services01}
+            title="Cool feature title"
+            description="Learning curve network effects return on investment."
+            altText="Cool feature image"
+          />
+          <FeatureCard
+            imageSrc={Services02}
+            title="Even cooler feature"
+            description="Learning curve network effects return on investment."
+            altText="Even cooler feature image"
+          />
+          <FeatureCard
+            imageSrc={Services03}
+            title="Cool feature title"
+            description="Learning curve network effects return on investment."
+            altText="Another cool feature image"
+          />
+        </div>
+
+        {/* start now connect area */}
+        <div className="mx-14 relative pb-[300px]">
+          <div className="grid lg:grid-cols-2 gap-44 items-center">
+            {/* Left Section - Image with Floating Box */}
+            <div className="relative">
+              <img
+                src={LogoManOnPhone}
+                alt="Lady with Laptop"
+                className="w-full shadow-sm"
+              />
+              <div className="shadow-lg p-8 py-10 bg-white lg:w-[280px] lg:top-[320px] lg:left-[60px] absolute z-10 rounded-xl">
+                <div className="w-full flex items-center justify-center mb-5">
+                  <Barchart />
+                </div>
+                <div>
+                  <h3 className="font-manrope font-bold text-2xl">30%</h3>
+                  <p className="font-manrope text-sm font-medium">
+                    More income in June
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Pitch termsheet backing validation focus release.
-            </p>
+            {/* Right Section - Text and Cards */}
+            <div className="relative">
+              <h2 className="text-[32px] mt-12 mb-12 font-manrope font-semibold">
+                We connect our customers with the best, and help them keep
+                up-and stay open.
+              </h2>
 
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
-            </div>
-          </div>
+              <InfoCardRight text="We connect our customers with the best." />
+              <InfoCardRight text="Advisor success customer launch party." />
+              <InfoCardRight text="Business-to-consumer long tail." />
 
-          <div className="col-span-1 ">
-            {/* image */}
-            <img src={Blog02} />
-            {/* category */}
-            <div className="flex gap-3 py-3 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
-            </div>
-
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Seed round direct mailing non-disclosure agreement graphical user
-              interface rockstar.
-            </p>
-
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
-            </div>
-          </div>
-
-          <div className="col-span-1 ">
-            {/* image */}
-            <img src={Blog03} />
-            {/* category */}
-            <div className="flex gap-3 py-3 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
-            </div>
-
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Beta prototype sales iPad gen-z marketing network effects value
-              proposition
-            </p>
-
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
+              <button
+                type="button"
+                className="mt-6 font-bold bg-[#0A2640] text-white shadow-sm rounded-full p-3 px-12 text-lg"
+              >
+                Start now
+              </button>
             </div>
           </div>
         </div>
 
-        <div className="mt-24">
-          <div>
-            <h2>
-              We connect our customers with the best, and help them keep up-and
-              stay open.
-            </h2>
-            <div>
-              <div>
-                <div className="bg-[#0A2640] text-white">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.24 12.24C21.3658 11.1142 21.9983 9.58722 21.9983 7.99504C21.9983 6.40285 21.3658 4.87588 20.24 3.75004C19.1142 2.62419 17.5872 1.9917 15.995 1.9917C14.4028 1.9917 12.8758 2.62419 11.75 3.75004L5 10.5V19H13.5L20.24 12.24Z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 8L2 22"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M17.5 15H9"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  We connect our customers with the best.
-                </div>
+        {/* customer connect area */}
+        <div className="mx-14 relative pb-[180px]">
+          <div className="grid lg:grid-cols-2 gap-44 items-center">
+            {/* Left Section - Text and Cards */}
+            <div className="relative mt-12">
+              <h2 className="text-[32px] mb-12 font-manrope font-semibold">
+                We connect our customers with the best, and help them keep
+                up-and stay open.
+              </h2>
 
-                <div>
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_62_553)">
-                      <path
-                        d="M1.77502 12.6543C1.77502 12.6543 5.77502 4.6543 12.775 4.6543C19.775 4.6543 23.775 12.6543 23.775 12.6543C23.775 12.6543 19.775 20.6543 12.775 20.6543C5.77502 20.6543 1.77502 12.6543 1.77502 12.6543Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.775 15.6543C14.4319 15.6543 15.775 14.3112 15.775 12.6543C15.775 10.9974 14.4319 9.6543 12.775 9.6543C11.1182 9.6543 9.77502 10.9974 9.77502 12.6543C9.77502 14.3112 11.1182 15.6543 12.775 15.6543Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_62_553">
-                        <rect
-                          width="24"
-                          height="24"
-                          fill="white"
-                          transform="translate(0.775024 0.654297)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Advisor success customer launch party.
-                </div>
-
-                <div>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_62_578)">
-                      <path
-                        d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 1V3"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 21V23"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4.22 4.21997L5.64 5.63997"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M18.36 18.3601L19.78 19.7801"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M1 12H3"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M21 12H23"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4.22 19.7801L5.64 18.3601"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M18.36 5.63997L19.78 4.21997"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_62_578">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Business-to-consumer long tail.
-                </div>
-              </div>
-
-              <div>
-                <img src={LadyWithLaptop} />
-                <div className="shadow-lg p-24 bg-white">
-                  <img src={PieGraph} />
-                  <div>
-                    <ul>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#0DBBFC] h-[10px] w-[10px]"></span>
-                        35% - Agile Development
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#69E6A6] h-[10px] w-[10px]"></span>
-                        30% - Investor bandwidth
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#C4C4C4] h-[10px] w-[10px]"></span>
-                        35% - A/B testing{" "}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <InfoCard
+                bgColor="bg-[#0A2640]"
+                textColor="text-white"
+                borderColor="border-[#f1f1f1]"
+                text="We connect our customers with the best."
+                icon={<SvgIcon1 />}
+              />
+              <InfoCard
+                bgColor="bg-white"
+                textColor="text-[#0A2640]"
+                borderColor="border-[#f1f1f1]"
+                text="Advisor success customer launch party."
+                icon={<SvgIcon2 />}
+              />
+              <InfoCard
+                bgColor="bg-white"
+                textColor="text-[#0A2640]"
+                borderColor="border-[#f1f1f1]"
+                text="Business-to-consumer long tail."
+                icon={<SvgIcon3 />}
+              />
             </div>
-          </div>
-        </div>
 
-        <div className="mt-24">
-          <div>
-            <h2>
-              We connect our customers with the best, and help them keep up-and
-              stay open.
-            </h2>
-            <div>
-              <div>
-                <div className="bg-[#0A2640] text-white">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.24 12.24C21.3658 11.1142 21.9983 9.58722 21.9983 7.99504C21.9983 6.40285 21.3658 4.87588 20.24 3.75004C19.1142 2.62419 17.5872 1.9917 15.995 1.9917C14.4028 1.9917 12.8758 2.62419 11.75 3.75004L5 10.5V19H13.5L20.24 12.24Z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 8L2 22"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M17.5 15H9"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  We connect our customers with the best.
+            {/* Right Section - Image with Floating Box */}
+            <div className="relative">
+              <img
+                src={LadyWithLaptop}
+                alt="Lady with Laptop"
+                className="w-full shadow-sm"
+              />
+              <div className="shadow-lg p-8 py-10 bg-white lg:w-[280px] lg:top-[320px] lg:left-[60px] absolute z-10 rounded-xl">
+                <div className="w-full flex items-center justify-center mb-5">
+                  <img src={PieGraph} alt="Pie Graph" />
                 </div>
-
-                <div>
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_62_553)">
-                      <path
-                        d="M1.77502 12.6543C1.77502 12.6543 5.77502 4.6543 12.775 4.6543C19.775 4.6543 23.775 12.6543 23.775 12.6543C23.775 12.6543 19.775 20.6543 12.775 20.6543C5.77502 20.6543 1.77502 12.6543 1.77502 12.6543Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.775 15.6543C14.4319 15.6543 15.775 14.3112 15.775 12.6543C15.775 10.9974 14.4319 9.6543 12.775 9.6543C11.1182 9.6543 9.77502 10.9974 9.77502 12.6543C9.77502 14.3112 11.1182 15.6543 12.775 15.6543Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_62_553">
-                        <rect
-                          width="24"
-                          height="24"
-                          fill="white"
-                          transform="translate(0.775024 0.654297)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Advisor success customer launch party.
-                </div>
-
-                <div>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_62_578)">
-                      <path
-                        d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 1V3"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 21V23"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4.22 4.21997L5.64 5.63997"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M18.36 18.3601L19.78 19.7801"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M1 12H3"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M21 12H23"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4.22 19.7801L5.64 18.3601"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M18.36 5.63997L19.78 4.21997"
-                        stroke="#0A2640"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_62_578">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Business-to-consumer long tail.
-                </div>
-              </div>
-
-              <div>
-                <img src={LadyWithLaptop} />
-                <div className="shadow-lg p-24 bg-white">
-                  <img src={PieGraph} />
-                  <div>
-                    <ul>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#0DBBFC] h-[10px] w-[10px]"></span>
-                        35% - Agile Development
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#69E6A6] h-[10px] w-[10px]"></span>
-                        30% - Investor bandwidth
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="block rounded-full bg-[#C4C4C4] h-[10px] w-[10px]"></span>
-                        35% - A/B testing{" "}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <ul className="text-[16px] font-medium space-y-3 mx-auto w-full">
+                  <li className="flex gap-3 items-center font-manrope">
+                    <span className="block rounded-full bg-[#0DBBFC] h-[6px] w-[6px]"></span>
+                    35% - Agile Development
+                  </li>
+                  <li className="flex gap-3 items-center font-manrope ">
+                    <span className="block rounded-full bg-[#69E6A6] h-[6px] w-[6px]"></span>
+                    30% - Investor bandwidth
+                  </li>
+                  <li className="flex gap-3 items-center font-manrope">
+                    <span className="block rounded-full bg-[#C4C4C4] h-[6px] w-[6px]"></span>
+                    35% - A/B testing
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -558,88 +264,84 @@ const LandingPage = () => {
       </section>
 
       {/* testimonials */}
-      <section className="bg-[#0A2640] p-24 mb-24">
-        <div>
-          <h1 className="text-[42px] text-white">
-            An enterprise template to ramp up your company website
-          </h1>
-          <div>
-            <img src={ArrowLeft} className="bg-white p-3" />
-            <img src={ArrowRight} className="bg-white p-3" />
-          </div>
-        </div>
+      <section className="relative bg-[#0A2640] py-20 mb-12">
+        <div className="mx-auto container mx-14">
+          {/* Header with Arrows for nav */}
+          <div className="mx-14 pb-16 grid grid-cols-1 lg:grid-cols-3 items-end">
+            <div className="col-span-2">
+              <h1 className="text-[40px] font-manrope text-white pr-32">
+                An enterprise template to ramp up your company website
+              </h1>
+            </div>
 
-        <div className="mx-14 grid grid-cols-3 gap-12 mb-12 items-center">
-          <div className="bg-white rounded-lg p-12">
-            <p>
-              “Buyer buzz partner network disruptive non-disclosure agreement
-              business”
-            </p>
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <div>
-                <p>Albus Dumbledore</p>
-                <p>Manager @ Howarts</p>
-              </div>
+            <div className="flex gap-4 justify-start lg:justify-end">
+              <button>
+                <img
+                  src={ArrowLeft}
+                  alt="ArrowLeft"
+                  className="bg-white p-3 rounded-full"
+                />
+              </button>
+              <button>
+                <img
+                  src={ArrowRight}
+                  alt="ArrowRight"
+                  className="bg-white p-3 rounded-full"
+                />
+              </button>
             </div>
           </div>
-          <div className="bg-white rounded-lg p-12">
-            <p>
-              “Learning curve infrastructure value proposition advisor strategy
-              user experience hypotheses investor.”
-            </p>
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <div>
-                <p>Albus Dumbledore</p>
-                <p>Manager @ Howarts</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-12">
-            <p>
-              “Release facebook responsive web design business model canvas seed
-              money monetization.”
-            </p>
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <div>
-                <p>Albus Dumbledore</p>
-                <p>Manager @ Howarts</p>
-              </div>
-            </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-14">
+            <TestimonialCard
+              quote="“Buyer buzz partner network disruptive non-disclosure agreement business.”"
+              name="Albus Dumbledore"
+              role="Manager @ Hogwarts"
+              image={User01}
+            />
+            <TestimonialCard
+              quote="“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”"
+              name="Severus Snape"
+              role="Manager @ Slytherin"
+              image={User02}
+            />
+            <TestimonialCard
+              quote="“Release facebook responsive web design business model canvas seed money monetization.”"
+              name="Harry Potter"
+              role="Team Leader @ Gryffindor"
+              image={User03}
+            />
           </div>
         </div>
       </section>
 
       {/* FAQ area */}
       <section className="bg-white lg:py-12 mx-auto container">
+        {/* Banner Section */}
         <div className="mb-8 mx-14">
-          <img src={FAQBanner} alt="faq-banner" className="w-full" />
+          <img src={FAQBanner} alt="faq-banner" className="w-full shadow-sm" />
         </div>
 
+        {/* Content Section */}
         <div className="flex mx-14 gap-8">
-          <h1 className="lg:text-[32px] font-medium lg:pr-24 w-1/2 font-manrope">
+          {/* Heading */}
+          <h1 className="lg:text-[32px] font-medium lg:pr-24 w-full lg:w-1/2 font-manrope">
             We connect our customers with the best, and help them keep up-and
             stay open.
           </h1>
 
-          <div className="text-lg font-medium w-1/2">
-            <div className="border-b flex justify-between py-5">
-              <span>We connect our customers with the best?</span>
-              <img
-                src={Check}
-                className="bg-[#0A2640] py-2.5 rounded-full px-2"
-              />
-            </div>
-
-            <div className="border-b flex justify-between py-5">
-              <span>Android research & development rockstar?</span>
-              <img
-                src={Check}
-                className="bg-[#0A2640] py-2.5 rounded-full px-2"
-              />
-            </div>
+          {/* FAQ Section */}
+          <div className="text-lg font-medium w-full lg:w-1/2">
+            {/* FAQ Item */}
+            <FAQItem
+              question="We connect our customers with the best?"
+              icon={Check}
+            />
+            <FAQItem
+              question="Android research & development rockstar?"
+              icon={Check}
+            />
           </div>
         </div>
       </section>
