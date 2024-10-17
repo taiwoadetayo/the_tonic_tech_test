@@ -73,7 +73,6 @@ const LandingPage = () => {
     },
   ];
 
-
   return (
     <main>
       {/* hero area && header area */}
@@ -146,7 +145,10 @@ const LandingPage = () => {
       </section>
 
       {/* our services */}
-      <section className="bg-white mx-auto container mt-24 relative mb-[100px]">
+      <section
+        id="bounce-in-section"
+        className="bg-white mx-auto container mt-24 relative mb-[100px]"
+      >
         {/* services area lead */}
         <div className="w-full text-center mb-12 px-36">
           <h5 className="text-[#777777] text-lg">Our Services</h5>
