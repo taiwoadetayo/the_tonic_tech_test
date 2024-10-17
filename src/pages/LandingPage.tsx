@@ -73,6 +73,7 @@ const LandingPage = () => {
     },
   ];
 
+
   return (
     <main>
       {/* hero area && header area */}
@@ -123,7 +124,11 @@ const LandingPage = () => {
           </div>
 
           <div className="z-10 w-1/2 flex justify-end">
-            <img src={HeroGraphics} alt="HeroGraphics" className="flex justify-end" />
+            <img
+              src={HeroGraphics}
+              alt="HeroGraphics"
+              className="flex justify-end"
+            />
           </div>
         </div>
 
@@ -131,11 +136,11 @@ const LandingPage = () => {
         <div className="container flex gap-10 mx-auto justify-center mt-24 z-10 mb-12">
           <div className="h-[1px] w-[1px] custom-shadow z-[50] relative left-[53px]"></div>
           <img src={Logo02} alt="client" />
-          <img src={Logo03} alt="client"  />
-          <img src={Logo04} alt="client"  />
-          <img src={Logo05} alt="client"  />
-          <img src={Logo06} alt="client"  />
-          <img src={Logo01} alt="client"  />
+          <img src={Logo03} alt="client" />
+          <img src={Logo04} alt="client" />
+          <img src={Logo05} alt="client" />
+          <img src={Logo06} alt="client" />
+          <img src={Logo01} alt="client" />
           <div className="h-[1px] w-[1px] custom-shadow z-[50] relative right-[73px]"></div>
         </div>
       </section>

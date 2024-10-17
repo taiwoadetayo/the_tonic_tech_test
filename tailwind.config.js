@@ -38,19 +38,25 @@ module.exports = {
           from: { transform: 'rotate(0deg)' },
           to: { transform: 'rotate(360deg)' },
         },
+        'bounce-in': {
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '50%': { transform: 'scale(1.1)', opacity: '0.8' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
-        'slow-fade-in-25s': 'fadeIn 25s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-20s': 'fadeIn 20s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-15s': 'fadeIn 15s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-13s': 'fadeIn 13s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-11s': 'fadeIn 11s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-9s': 'fadeIn 9s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-7s': 'fadeIn 7s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in-5s': 'fadeIn 5s ease-in-out', // You can adjust the duration as needed
-        'slow-fade-in': 'fadeIn 3s ease-in-out', // You can adjust the duration as needed
-        'fast-fade-in': 'fastFadeIn 0.3s ease-in-out', // You can adjust the duration as needed
+        'slow-fade-in-25s': 'fadeIn 25s ease-in-out',
+        'slow-fade-in-20s': 'fadeIn 20s ease-in-out',
+        'slow-fade-in-15s': 'fadeIn 15s ease-in-out',
+        'slow-fade-in-13s': 'fadeIn 13s ease-in-out',
+        'slow-fade-in-11s': 'fadeIn 11s ease-in-out',
+        'slow-fade-in-9s': 'fadeIn 9s ease-in-out',
+        'slow-fade-in-7s': 'fadeIn 7s ease-in-out',
+        'slow-fade-in-5s': 'fadeIn 5s ease-in-out',
+        'slow-fade-in': 'fadeIn 3s ease-in-out',
+        'fast-fade-in': 'fastFadeIn 0.3s ease-in-out',
         'spin': 'spin 2s linear infinite',
+        'bounce-in': 'bounce-in 1s ease-in-out',
       },
     },
   },
