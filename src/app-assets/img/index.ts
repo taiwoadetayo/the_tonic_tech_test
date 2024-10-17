@@ -11,8 +11,9 @@ import PieGraph from "./PieGraph.png";
 import Logo from "./Logo.png";
 import LogoManOnPhone from "./ManOnPhone.png";
 import Analytics01 from "./Analytics01.png";
-import Analytics02 from "./Analytics03.png";
+import Analytics02 from "./Analytics02.png";
 import Analytics03 from "./Analytics03.png";
+import HeroGraphics from "./HeroGraphics.png";
 import Author01 from "./Author01.png";
 import Author02 from "./Author02.png";
 import Author03 from "./Author03.png";
@@ -59,5 +60,6 @@ export {
   LogoManOnPhone,
   Services01,
   Services02,
+  HeroGraphics,
   Services03,
 };

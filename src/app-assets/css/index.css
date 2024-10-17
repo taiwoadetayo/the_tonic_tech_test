@@ -22,3 +22,7 @@ h4,
 .font-manrope {
   font-family: "Manrope", sans-serif !important;
 }
+
+.custom-shadow {
+  box-shadow: 1px 0px 20px 50px #0a2640d1;
+}
