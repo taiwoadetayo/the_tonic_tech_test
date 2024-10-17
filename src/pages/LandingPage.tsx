@@ -619,7 +619,7 @@ const LandingPage = () => {
         </div>
 
         <div className="flex mx-14 gap-8">
-          <h1 className="lg:text-[32px] font-medium lg:pr-24 w-1/2">
+          <h1 className="lg:text-[32px] font-medium lg:pr-24 w-1/2 font-manrope">
             We connect our customers with the best, and help them keep up-and
             stay open.
           </h1>
