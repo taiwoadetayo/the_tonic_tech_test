@@ -19,8 +19,8 @@ const FeatureCard: React.FC<{
     <p className="text-lg text-[#777777] font-medium">{description}</p>
 
     {/* Button */}
-    <button className="flex items-center gap-4 mt-5 border-b-[3px] border-[#0A2640] py-3">
-      <span className="font-semibold text-xl text-[#0A2640]">Explore page</span>
+    <button className="flex items-center gap-4 mt-5 border-b-[2px] border-[#0A2640] py-3">
+      <span className="font-bold text-lg text-[#0A2640]">Explore page</span>
       <svg
         width="24"
         height="26"
