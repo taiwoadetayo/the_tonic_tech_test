@@ -5,7 +5,7 @@ import { FooterLinksProps } from "../app-schemas/Footer.interface";
 
 const FooterBanner: React.FC = () => (
   <div className="mx-14 flex-col relative rounded-xl flex mb-36 bg-[#0A2640] py-16 overflow-hidden">
-    <div className="absolute -top-[74em] -right-[40em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
+    <div className="absolute -top-[75em] -right-[42em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
 
     {/* newsletter */}
     <div className="flex justify-center z-10">
@@ -14,7 +14,7 @@ const FooterBanner: React.FC = () => (
           An enterprise template to ramp up your company website
         </h1>
         
-        <form className="flex justify-center gap-5 mt-12">
+        <form className="flex justify-center gap-5 mt-10">
           <div>
             <input
               type="email"

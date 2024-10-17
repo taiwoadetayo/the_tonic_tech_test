@@ -1,4 +1,5 @@
 // import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Blog01,
   Blog02,
@@ -19,10 +20,43 @@ import {
   Logo04,
   Logo05,
   Logo06,
+  Author01,
+  Author02,
+  Author03,
 } from "../app-assets/img";
+import BlogCard from "../app-components/BlogCard";
 import Footer from "../app-layouts/Footer";
 
 const LandingPage = () => {
+  const blogs = [
+    {
+      image: Blog01,
+      category: "Category",
+      date: "November 22, 2021",
+      caption: "Pitch termsheet backing validation focus release.",
+      author: "Chandler Bing",
+      authorImg: Author01, // Replace with author's image if available
+    },
+    {
+      image: Blog02,
+      category: "Category",
+      date: "November 22, 2021",
+      caption:
+        "Seed round direct mailing non-disclosure agreement graphical user interface rockstar.",
+      author: "Chandler Bing",
+      authorImg: Author02, // Replace with author's image if available
+    },
+    {
+      image: Blog03,
+      category: "Category",
+      date: "November 22, 2021",
+      caption:
+        "Beta prototype sales iPad gen-z marketing network effects value proposition.",
+      author: "Chandler Bing",
+      authorImg: Author03, // Replace with author's image if available
+    },
+  ];
+
   return (
     <main>
       {/* header area*/}
@@ -579,107 +613,70 @@ const LandingPage = () => {
       </section>
 
       {/* FAQ area */}
-      <section className="mx-auto flex flex-col w-2/3 justify-center mb-24">
-        <img src={FAQBanner} />
+      <section className="bg-white lg:py-12 mx-auto container">
+        <div className="mb-8 mx-14">
+          <img src={FAQBanner} alt="faq-banner" className="w-full" />
+        </div>
 
-        <div>
-          <h1>
+        <div className="flex mx-14 gap-8">
+          <h1 className="lg:text-[32px] font-medium lg:pr-24 w-1/2">
             We connect our customers with the best, and help them keep up-and
             stay open.
           </h1>
-          <div>
-            <div className="border-b">
-              We connect our customers with the best?
-              <img src={Check} className="bg-[#0A2640] p-3 " />
+
+          <div className="text-lg font-medium w-1/2">
+            <div className="border-b flex justify-between py-5">
+              <span>We connect our customers with the best?</span>
+              <img
+                src={Check}
+                className="bg-[#0A2640] py-2.5 rounded-full px-2"
+              />
             </div>
-            <div className="border-b">
-              Android research & development rockstar?
-              <img src={Check} className="bg-[#0A2640] p-3 " />
+
+            <div className="border-b flex justify-between py-5">
+              <span>Android research & development rockstar?</span>
+              <img
+                src={Check}
+                className="bg-[#0A2640] py-2.5 rounded-full px-2"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* BLOG area */}
-      <section className="px-36 mx-auto">
+      <section className="mx-auto bg-white container lg:px-28 py-12">
+        {/* blog area lead */}
         <div className="w-full text-center mb-12">
-          <h5>Our Blog</h5>
-          <h1 className="text-[48px] ">
+          <h5 className="text-[#777777] text-lg">Our Blog</h5>
+          <h1 className="text-[42px] px-6 font-medium font-manrope">
             Value proposition accelerator product management venture
           </h1>
         </div>
 
-        <div className="mx-14 grid grid-cols-3 gap-12 mb-12 items-center">
-          <div className="col-span-1 items-center">
-            {/* image */}
-            <img src={Blog01} />
-            {/* category */}
-            <div className="flex gap-3 py-4 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
-            </div>
-
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Pitch termsheet backing validation focus release.
-            </p>
-
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
-            </div>
-          </div>
-
-          <div className="col-span-1 ">
-            {/* image */}
-            <img src={Blog02} />
-            {/* category */}
-            <div className="flex gap-3 py-3 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
-            </div>
-
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Seed round direct mailing non-disclosure agreement graphical user
-              interface rockstar.
-            </p>
-
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
-            </div>
-          </div>
-
-          <div className="col-span-1 ">
-            {/* image */}
-            <img src={Blog03} />
-            {/* category */}
-            <div className="flex gap-3 py-3 text-lg">
-              <h5 className="font-bold text-[#0A2640]">Category</h5>
-              <span className="text-[#777777]">November 22, 2021</span>
-            </div>
-
-            {/* caption */}
-            <p className="text-[20px] font-semibold">
-              Beta prototype sales iPad gen-z marketing network effects value
-              proposition
-            </p>
-
-            {/* author */}
-            <div className="flex gap-4 mt-5">
-              <img src={Blog01} className="w-[32px] h-[32px] rounded-full" />
-              <span>Chandler Bing</span>
-            </div>
-          </div>
+        {/* blog cards */}
+        <div className="mx-14 grid grid-cols-3 gap-14 mb-12 items-center">
+          {blogs.map((blog, index) => (
+            <BlogCard
+              key={index}
+              image={blog.image}
+              category={blog.category}
+              date={blog.date}
+              caption={blog.caption}
+              author={blog.author}
+              authorImg={blog.authorImg}
+            />
+          ))}
         </div>
 
-        <div className="text-center mt-16">
-          <button className="p-4 px-16 font-bold text-lg bg-white border-2 rounded-full border-[#0A2640] text-[#0A2640]">
+        {/* load more link */}
+        <div className="text-center mt-20">
+          <Link
+            to={"/"}
+            className="p-4 px-16 font-bold text-lg bg-white border-2 rounded-full border-[#0A2640] text-[#0A2640]"
+          >
             Load more
-          </button>
+          </Link>
         </div>
       </section>
 

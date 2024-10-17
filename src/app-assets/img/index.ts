@@ -12,6 +12,9 @@ import Logo from "./Logo.png";
 import Analytics01 from "./Analytics01.png";
 import Analytics02 from "./Analytics03.png";
 import Analytics03 from "./Analytics03.png";
+import Author01 from "./Author01.png";
+import Author02 from "./Author02.png";
+import Author03 from "./Author03.png";
 import Logo01 from "./clients/Logo01.png";
 import Logo02 from "./clients/Logo02.png";
 import Logo03 from "./clients/Logo03.png";
@@ -40,4 +43,7 @@ export {
   Logo04,
   Logo05,
   Logo06,
+  Author01,
+  Author02,
+  Author03,
 };
