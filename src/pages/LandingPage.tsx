@@ -80,7 +80,9 @@ const LandingPage = () => {
         <div className="absolute -top-[60em] -right-[50em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
 
         <div className="container mx-auto flex justify-between gap-24 items-center">
-          <img src={Logo} alt="h-logo" />
+          <Link to="/">
+            <img src={Logo} alt="h-logo" />
+          </Link>
           <ul className="z-10 text-white flex justify-end gap-10 items-center font-semibold">
             <li>
               <Link to="/">Product</Link>
@@ -88,7 +90,9 @@ const LandingPage = () => {
             <li>
               <Link to="/">Services</Link>
             </li>
-            <li>About</li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
             <li>
               <button className="hover:shadow-lg p-2 px-10 bg-white rounded-full text-[#1C3D5B] font-semibold">
                 Log In
