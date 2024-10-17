@@ -4,7 +4,7 @@ const FAQItem: React.FC<{ question: string; icon: string }> = ({
 }) => (
   <div className="border-b flex justify-between items-center py-5">
     <span>{question}</span>
-    <img src={icon} className="bg-[#0A2640] py-2.5 rounded-full px-2" />
+    <img src={icon} alt="arror-right" className="bg-[#0A2640] py-2.5 rounded-full px-2" />
   </div>
 );
 

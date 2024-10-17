@@ -75,28 +75,33 @@ const LandingPage = () => {
 
   return (
     <main>
-      {/* header area*/}
-      <header></header>
+      {/* hero area && header area */}
+      <section className="py-6 flex-col relative flex mb-36 bg-[#0A2640] overflow-hidden">
+        <div className="absolute -top-[60em] -right-[50em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
 
-      {/* hero area */}
-      <section className="py-24 flex-col relative flex mb-36 bg-[#0A2640] overflow-hidden">
-        <div className="absolute -top-[74em] -right-[40em] rounded-full bg-[#1C3D5B] h-[1293px] w-[1293px] rounded-3xl"></div>
-
-        <div>
+        <div className="container mx-auto flex justify-between gap-24 items-center">
           <img src={Logo} alt="h-logo" />
-          <ul>
-            <li>Product</li>
-            <li>Services</li>
+          <ul className="z-10 text-white flex justify-end gap-10 items-center font-semibold">
+            <li>
+              <Link to="/">Product</Link>
+            </li>
+            <li>
+              <Link to="/">Services</Link>
+            </li>
             <li>About</li>
             <li>
-              <button>Log In</button>
+              <button className="hover:shadow-lg p-2 px-10 bg-white rounded-full text-[#1C3D5B] font-semibold">
+                Log In
+              </button>
             </li>
           </ul>
         </div>
 
-        <div className="container mx-auto flex justify-between gap-24 items-center">
+        <div className="container mx-auto flex justify-between gap-24 items-center mt-12">
           <div className="w-1/2">
-            <h1 className="text-white font-medium text-[42px] font-medium font-manrope pr-16">Save time by building fast with Boldo Template </h1>
+            <h1 className="text-white font-medium text-[42px] font-medium font-manrope pr-16">
+              Save time by building fast with Boldo Template
+            </h1>
 
             <p className="text-sm text-white mt-6">
               Funding handshake buyer business-to-business metrics iPad
@@ -118,19 +123,19 @@ const LandingPage = () => {
           </div>
 
           <div className="z-10 w-1/2 flex justify-end">
-            <img src={HeroGraphics} />
+            <img src={HeroGraphics} alt="HeroGraphics" className="flex justify-end" />
           </div>
         </div>
 
         {/* clients area */}
-        <div className="container flex gap-10 mx-auto justify-center mt-24 z-10">
+        <div className="container flex gap-10 mx-auto justify-center mt-24 z-10 mb-12">
           <div className="h-[1px] w-[1px] custom-shadow z-[50] relative left-[53px]"></div>
-          <img src={Logo02} />
-          <img src={Logo03} />
-          <img src={Logo04} />
-          <img src={Logo05} />
-          <img src={Logo06} />
-          <img src={Logo01} />
+          <img src={Logo02} alt="client" />
+          <img src={Logo03} alt="client"  />
+          <img src={Logo04} alt="client"  />
+          <img src={Logo05} alt="client"  />
+          <img src={Logo06} alt="client"  />
+          <img src={Logo01} alt="client"  />
           <div className="h-[1px] w-[1px] custom-shadow z-[50] relative right-[73px]"></div>
         </div>
       </section>
